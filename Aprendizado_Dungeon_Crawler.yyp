@@ -37,9 +37,11 @@
   "resources":[
     {"id":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_shoot","path":"objects/obj_shoot/obj_shoot.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"spr_shoot","path":"sprites/spr_shoot/spr_shoot.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
