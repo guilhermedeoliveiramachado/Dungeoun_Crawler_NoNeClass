@@ -12,7 +12,3 @@ velh = (_right - _left) * max_speed;
 
 //Definindo sua velocidade vertical
 velv = (_down - _up) * max_speed;
-
-//Fazendo o player se mover
-x+=velh;
-y+=velv;
