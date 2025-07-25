@@ -7,8 +7,19 @@ _left = keyboard_check(ord("A"));
 _up = keyboard_check(ord("W"));
 _down = keyboard_check(ord("S"));
 
-//Definindo sua velocidade horizontal
-velh = (_right - _left) * max_speed;
+//Ajustando o movimento
 
-//Definindo sua velocidade vertical
-velv = (_down - _up) * max_speed;
+//Descobrindo em que lado o player está se movendo
+//Verificando se o player está tocando em alguma tecla
+if(_up || _down || _left || _right){
+    move_dir = point_direction(0, 0, (_right - _left), (_down - _up));
+    //Fazendo ele ganhar velocidade ao andar com o lerp
+    vel = lerp(vel, max_speed, 0.1);
+}else{
+    //Se ele não está tocando nenhuma tecla, ele para de se mover
+    vel = lerp(vel, 0, 0.1);
+}
+
+//Vou dar a minha velocidade com base na direção que estou indo
+velh = lengthdir_x(vel, move_dir);
+velv = lengthdir_y(vel, move_dir);
