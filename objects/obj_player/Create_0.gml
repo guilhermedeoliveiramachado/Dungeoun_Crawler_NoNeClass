@@ -14,3 +14,28 @@ vel = 0;
 
 //Variável para saber em qual direção o player está
 move_dir = 0;
+
+//Variável que guarda que arma eu estou utilizando
+arma = noone;
+
+//Função que ele pega a arma
+usar_arma = function(){
+    if(arma){
+        var _tiro = mouse_check_button(mb_left);
+        arma.atirar = _tiro;
+        
+        //variável que guarda a direção do ponteiro do mouse
+        var _dir = point_direction(x, y, mouse_x, mouse_y);
+        
+        //Achando a posição da arma
+        var _x = x + lengthdir_x(sprite_width / 2, _dir);
+        var _y = y + lengthdir_y(sprite_width / 2, _dir);
+        
+        //pegar a arma
+        arma.x = _x;
+        arma.y = _y;
+        
+        //mudando o angulo da arma
+        arma.image_angle = _dir;
+    }
+}

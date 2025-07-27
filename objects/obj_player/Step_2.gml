@@ -27,3 +27,6 @@ repeat (abs(velv)) {
     }
 	
 }
+
+//fazendo ele acionar o método de atirar no end step porque ele vai ser excutado ao mesmo tempo da movimentação do player
+usar_arma();

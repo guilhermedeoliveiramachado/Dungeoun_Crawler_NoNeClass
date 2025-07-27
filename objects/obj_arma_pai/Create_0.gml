@@ -8,16 +8,13 @@ image_yscale = 0.5;
 
 //tiro
 //Variável que verifica se ele pode atirar ou não
-atirar = true;
+atirar = false;
 
 //Delay para poder atirar
 delay_shoot = 0;
 
 //Criando uma função para atirar
 atirando = function(){
-    //A arma atira para a direção do mouse
-    image_angle = point_direction(x, y, mouse_x, mouse_y);
-    
     if(atirar){
         //Depois de acabar o delay, ele pode atirar
         delay_shoot--;
@@ -30,12 +27,12 @@ atirando = function(){
             
             //Achando a posição de onde ele vai atirar
             var _x = lengthdir_x(sprite_width, image_angle);
-            var _y = lengthdir_y(sprite_width, image_angle);
+            var _y = lengthdir_y(sprite_height, image_angle);
             
             var _tiro = instance_create_layer(x+_x, y+_y, layer, tiro);
             
             //Dando velocidade ao tiro
-            tiro.speed = velocidade;
+            _tiro.speed = velocidade;
             //Dando a direção do tiro
             _tiro.direction = image_angle;
         }
