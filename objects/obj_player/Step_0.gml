@@ -15,7 +15,7 @@ _fire = mouse_check_button_pressed(mb_left);
 if(_up || _down || _left || _right){
     move_dir = point_direction(0, 0, (_right - _left), (_down - _up));
     //Fazendo ele ganhar velocidade ao andar com o lerp
-    vel = lerp(vel, max_speed, 0.1);
+    vel = max_speed;
 }else{
     //Se ele não está tocando nenhuma tecla, ele para de se mover
     vel = lerp(vel, 0, 0.1);
