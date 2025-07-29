@@ -23,3 +23,6 @@ if(_up || _down || _left || _right){
 //Vou dar a minha velocidade com base na direção que estou indo
 velh = lengthdir_x(vel, move_dir);
 velv = lengthdir_y(vel, move_dir);
+
+//Função que faz ele jogar a arma
+joga_arma();

@@ -39,3 +39,22 @@ usar_arma = function(){
         arma.image_angle = _dir;
     }
 }
+
+//Criando uma função que deixa o player se livrar da arma atual
+joga_arma = function(){
+    
+    if(arma){
+        
+        //Input para ele poder jogar a arma fora
+        var _jogar_arma = keyboard_check_released(ord("G"));
+        
+        if(_jogar_arma){
+            //Fazer a arma ser jogada
+            arma.speed = 3;
+            arma.direction = arma.image_angle;
+            
+            //Dessacociando o id da arma para poder pegar outra
+            arma = noone;
+        }
+    }
+}
