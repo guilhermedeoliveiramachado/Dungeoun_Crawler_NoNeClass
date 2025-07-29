@@ -48,12 +48,24 @@ joga_arma = function(){
         //Input para ele poder jogar a arma fora
         var _jogar_arma = keyboard_check_released(ord("G"));
         
-        if(_jogar_arma){
+        //Checando se a arma está perto da parede para não poder jogá-la
+        var _col;
+        
+        //Rodando o código de dentro da arma
+        with(arma){
+            _col = place_meeting(x, y, obj_block);
+        }
+        
+        //Se ele não estiver colidindo, ele pode jogar a arma
+        if(_jogar_arma && !_col){
             //Fazer a arma ser jogada
             arma.speed = 3;
             arma.direction = arma.image_angle;
             
-            //Dessacociando o id da arma para poder pegar outra
+            //Impedindo que a arma atire mesmo se for jogada
+            arma.atirar = false;
+            
+            //Desasociando o id da arma para poder pegar outra
             arma = noone;
         }
     }

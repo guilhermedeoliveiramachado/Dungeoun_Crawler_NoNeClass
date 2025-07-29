@@ -10,8 +10,8 @@ _down = keyboard_check(ord("S"));
 //Ajustando o movimento
 
 //Descobrindo em que lado o player está se movendo
-//Verificando se o player está tocando em alguma tecla
-if(_up || _down || _left || _right){
+//Verificando se o player está tocando em alguma tecla com o XOR para prevenir que ele não ande na horizontal quando clicar no right e left e na vertical com o up e down ao mesmo tempo
+if(_up xor _down or _left xor _right){
     move_dir = point_direction(0, 0, (_right - _left), (_down - _up));
     //Fazendo ele ganhar velocidade ao andar com o lerp
     vel = max_speed;

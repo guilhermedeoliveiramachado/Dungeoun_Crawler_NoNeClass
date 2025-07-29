@@ -3,6 +3,9 @@ atirando();
 
 //Fazendo ele perder velocidade
 if(speed>0){
+    
+    quicar_parede();
+    
     speed *=0.9;
     
     if(speed<=0.1){

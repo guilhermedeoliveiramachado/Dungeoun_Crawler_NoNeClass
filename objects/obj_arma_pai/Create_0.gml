@@ -38,3 +38,16 @@ atirando = function(){
         }
     }
 }
+
+//Função que faz a arma quicar na parede para impedir que ele entre nela
+quicar_parede = function(){
+    
+    //Batendo na parede e voltando para trás horizontalmente e verticalmente
+    if(place_meeting(x+hspeed, y, obj_block)){
+        hspeed*=-1;
+    }
+    
+    if(place_meeting(x, y+vspeed, obj_block)){
+        vspeed*=-1;
+    }
+}
