@@ -13,12 +13,14 @@ atirar = false;
 //Delay para poder atirar
 delay_shoot = 0;
 
+pai = noone;
+
 //Criando uma função para atirar
 atirando = function(){
+    //Depois de acabar o delay, ele pode atirar
+    delay_shoot--;
+    
     if(atirar){
-        //Depois de acabar o delay, ele pode atirar
-        delay_shoot--;
-        
         if(delay_shoot<=0){
             //Resetando o delay
             delay_shoot = espera_tiro * room_speed;
@@ -35,6 +37,18 @@ atirando = function(){
             _tiro.speed = velocidade;
             //Dando a direção do tiro
             _tiro.direction = image_angle;
+            
+            //Empurando o Player
+            //Ele faz o recuo só quando a arma tem dono
+            if(pai){
+                
+                //Achando o valor de velh e velv com base na direção do tiro
+                var _velh = lengthdir_x(knockback, image_angle);
+                var _velv = lengthdir_y(knockback, image_angle);
+                
+                pai.velh -= _velh;
+                pai.velv -= _velv;
+            }
         }
     }
 }
