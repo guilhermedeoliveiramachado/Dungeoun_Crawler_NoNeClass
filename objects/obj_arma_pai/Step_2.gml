@@ -1,6 +1,11 @@
 //Aplicando a função no step
 atirando();
 
+//Diminuindo o delay da arma
+if(delay_pegar_arma>0){
+    delay_pegar_arma--;
+}
+
 //Fazendo ele perder velocidade
 if(speed>0){
     

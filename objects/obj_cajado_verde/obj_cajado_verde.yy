@@ -9,6 +9,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"espera_tiro","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.5",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"tiro","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resource":{"name":"obj_shoot","path":"objects/obj_shoot/obj_shoot.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"obj_shoot",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"knockback","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5.3",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"imprecisao","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
     "name":"Armas",

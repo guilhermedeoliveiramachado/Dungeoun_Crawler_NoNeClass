@@ -65,6 +65,12 @@ joga_arma = function(){
             //Impedindo que a arma atire mesmo se for jogada
             arma.atirar = false;
             
+            //A arma não vai ter mais dono
+            arma.pai = noone;
+            
+            //Dando delay para a arma
+            arma.delay_pegar_arma = room_speed * 2;
+            
             //Desasociando o id da arma para poder pegar outra
             arma = noone;
         }

@@ -34,6 +34,7 @@
         "GMObject",
       ],"listItems":[],"multiselect":false,"name":"tiro","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"obj_shoot","path":"objects/obj_shoot/obj_shoot.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_shoot","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"knockback","filters":[],"listItems":[],"multiselect":false,"name":"knockback","rangeEnabled":true,"rangeMax":20.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"imprecisao","filters":[],"listItems":[],"multiselect":false,"name":"imprecisao","rangeEnabled":true,"rangeMax":50.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

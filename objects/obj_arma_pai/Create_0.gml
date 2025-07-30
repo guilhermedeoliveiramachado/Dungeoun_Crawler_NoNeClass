@@ -15,6 +15,9 @@ delay_shoot = 0;
 
 pai = noone;
 
+//Delay para pegar a arma
+delay_pegar_arma = 0;
+
 //Criando uma função para atirar
 atirando = function(){
     //Depois de acabar o delay, ele pode atirar
@@ -36,7 +39,7 @@ atirando = function(){
             //Dando velocidade ao tiro
             _tiro.speed = velocidade;
             //Dando a direção do tiro
-            _tiro.direction = image_angle;
+            _tiro.direction = image_angle + random_range(-imprecisao, imprecisao);
             
             //Empurando o Player
             //Ele faz o recuo só quando a arma tem dono
